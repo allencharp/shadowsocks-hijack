@@ -400,6 +400,7 @@ class TCPRelayHandler(object):
         is_local = self._is_local
         data = None
         try:
+            #here
             data = self._local_sock.recv(BUF_SIZE)
         except (OSError, IOError) as e:
             if eventloop.errno_from_exception(e) in \
